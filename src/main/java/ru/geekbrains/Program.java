@@ -8,7 +8,7 @@ public class Program {
             MyArray myArray = new MyArray();
             String array [][] = myArray.createArray();
             myArray.printMyArray(array);
-            myArray.transformAndSum1(array);
+            myArray.transformAndSum(array);
 
         } catch (MyArraySizeException ex) {
             System.out.println(ex.getMessage());

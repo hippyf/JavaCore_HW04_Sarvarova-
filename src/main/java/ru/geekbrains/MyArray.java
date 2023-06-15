@@ -15,9 +15,9 @@ public class MyArray {
     }
 
     /**
-     * Создание массива
-     *
-     * @return
+     * Создание массива. Пользователь вводит размер массива (который должен равняться 4х4), а также числовые
+     * значения строк массива
+     * @return Строковый массив размера 4х4
      */
     String[][] createArray() throws MyArraySizeException {
         // Запрос размера массива 4х4
@@ -44,6 +44,10 @@ public class MyArray {
         }
     }
 
+    /**
+     * Печать массива
+     * @param myArray
+     */
     void printMyArray(String[][] myArray) {
         System.out.println("Ваш массив: ");
         for (int i = 0; i < sizeX; i++) {
@@ -55,6 +59,11 @@ public class MyArray {
 
     }
 
+    /**
+     * Проверка, можно ли строковое значение преобразоваь в число
+     * @param str
+     * @return true or false
+     */
     public static boolean isNumber(String str) {
         try {
             int i;
@@ -65,7 +74,12 @@ public class MyArray {
         }
     }
 
-    void transformAndSum1 (String[][] myArray) throws MyArrayDataException {
+    /**
+     * Преобразвание элементов массива в int. Суммирование всех элементов массива
+     * @param myArray
+     * @throws MyArrayDataException
+     */
+    void transformAndSum (String[][] myArray) throws MyArrayDataException {
         int[][] myArrayInt = new int[sizeX][sizeY];
         int sum = 0;
         for (int i = 0; i < sizeX; i++) {
